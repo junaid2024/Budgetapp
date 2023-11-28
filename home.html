@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+            .head {
+                text-align: center;
+            }
+    </style>
+</head>
+
+<body class="bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 bg-transprent text-emphasis-dark border-0 rounded-3 p-4 mt-5" style="background-color: rgba(253, 242, 242, 0.61);
+        backdrop-filter: blur(5px);height: 100%;">
+                <h1 class="head" id="wname">WELCOME BUDGETBUDDY</h1>
+                <h4 class="head">Empowering your finances, one budget at a time</h4>
+            </div>
+            <div class="row mt-4">
+                <div class="col-6 p-5">
+                    <div class=" bg-secondry-subtle text-emphasis-dark border rounded-3 p-4">
+                        <h1 class="text-center text-white">INCOME</h1>
+                        <div class="form-floating m-2">
+                            <input type="text" class="form-control" id="descrip" placeholder="Description">
+                            <label for="floatingInput">Description</label>
+                        </div>
+                        <div class="form-floating m-2">
+                            <input type="number" class="form-control" id="inamount" placeholder="Amount">
+                            <label for="floatingPassword">Amount</label>
+                        </div>
+
+
+                        <button type="submit" onclick="incomeAdd()" class="btn btn-primary m-2"
+                            style="align-items: center;">ADD</button>
+                        <div class="m-3">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 p-5">
+                    <div class=" bg-secondry-subtle text-emphasis-dark border rounded-3 p-4">
+                        <h1 class="text-center text-white">EXPENSE</h1>
+                        <div class="form-floating m-2">
+                            <input type="text" class="form-control" id="exderip" placeholder="" value="">
+                            <label for="floatingInput">Description</label>
+                        </div>
+                        <div class="form-floating m-2">
+                            <input type="number" class="form-control" id="examount" placeholder="Password">
+                            <label for="floatingPassword">Amount</label>
+                        </div>
+
+
+                        <button type="button" onclick="expencesAdd()" class="btn btn-primary m-2">ADD</button>
+                        <div class="m-3">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row ms-5">
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title text-center p-3">Total Income</h5>
+                            <h1 class="text-5 text-center" id="incomeResult">0</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title text-center p-3" >Balance</h5>
+                            <h1 class="text-5 text-center" id="balanceResult">0</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title text-center p-3">Total Expence</h5>
+                            <h1 class="text-5 text-center" id="Expenceresult">0</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row p-5">
+                <div class="col-6">
+                    <div>
+                        <table class="table border-2 text-center texr-white">
+                            <thead>
+                                <tr>
+                                    <th colspan="3">Income</th>
+                                </tr>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Amount</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody id="intable"></tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div>
+                        <table class="table border-2 text-center">
+                            <thead>
+                                <tr>
+                                    <th colspan="3">Expence</th>
+                                </tr>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Amount</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody id="extable"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-5"> 
+                <div class="col-12 text-center"><button class="btn btn-danger" onclick="logout()">Logout</button></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./budget.js"></script>
+
+</html>
